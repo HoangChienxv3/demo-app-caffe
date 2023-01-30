@@ -1,0 +1,23 @@
+.grid-contrainer {
+    width: 99.5%;
+    height: 99.5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 40% 60%;
+    grid-template-areas: 'table table table table bill' 'product product product product bill';
+}
+
+.app-table {
+    grid-area: table;
+    /* background-color: aquamarine; */
+}
+
+.app-bill {
+    grid-area: bill;
+    /* background-color: bisque; */
+}
+
+.app-product {
+    grid-area: product;
+    /* background-color: tomato; */
+}

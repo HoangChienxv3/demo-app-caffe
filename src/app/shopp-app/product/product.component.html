@@ -1,0 +1,17 @@
+<div class="category-food">
+    <div class="category-option">
+        <form [formGroup]="selectCategoryFrom">
+            <div class="category-option-form">
+                <select formControlName="selectCategory" (change)="onChangeCategory()">
+                    <option value="">Chọn danh mục</option>
+                    <option *ngFor="let category of categoryList; let i = index" [ngValue]="i">{{category.name}}</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="panel-product">
+        <div *ngFor="let product of productList" class="product">
+            <app-product-order [product]="product" (orderProduct)="orderProduct($event)"></app-product-order>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,154 @@
+.floor-table {
+    width: 100%;
+    height: 100%;
+    /* background-color: cadetblue; */
+    border: darkgrey solid 2px;
+}
+
+.floor-option {
+    height: 10%;
+}
+
+.floor-option-form select {
+    margin: 0.5%;
+    padding: 0.5%;
+    width: 30%;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #2F4F4F;
+}
+
+.floor-option-form select option {
+    font-weight: bold;
+    color: #2F4F4F;
+}
+
+.panel-table {
+    width: 100%;
+    height: 90%;
+    /* min-height: 100%; */
+    /* background-color: brown; */
+    overflow-y: scroll;
+}
+
+.panel-table::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.panel-table::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.panel-table::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.table {
+    background-color: #DAD2C9;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    float: left;
+    margin: 5px 2.5% 5px 2.5%;
+    width: 20%;
+    height: 90px;
+    border-radius: 20%;
+    overflow: hidden;
+    border: none;
+}
+
+.table:hover {
+    /* border: #ff0000 inset 2px; */
+    box-shadow: 0 1px 5px 3px #886D53;
+}
+
+.table .table-details {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    border: none;
+}
+
+.table .active {
+    background-color: #286A49;
+    color: white;
+}
+
+
+/*  */
+
+.tablle-poup {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.tablle-poup .poup {
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(36, 32, 32, 0.3);
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+}
+
+.tablle-poup .poup .bookTable {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-color: #886D53;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.tablle-poup .poup .bookTable button {
+    margin-top: 20px;
+    margin-left: 7%;
+    width: 40%;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    color: #2F4F4F;
+}
+
+.tablle-poup .poup .bookTable button:hover {
+    background-color: teal;
+    color: white;
+}
+
+.tablle-poup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.tablle-poup .hidden {
+    visibility: hidden;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

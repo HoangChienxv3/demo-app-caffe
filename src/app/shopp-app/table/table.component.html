@@ -1,0 +1,39 @@
+<div class="floor-table">
+    <div class="floor-option">
+        <form [formGroup]="selectFloorFrom">
+            <div class="floor-option-form">
+                <select formControlName="selectFloor" (change)="onChangeFloor()">
+                    <option value="">Chọn Tầng</option>
+                    <option *ngFor="let floor of floorList; let i = index" [ngValue]="i">{{floor.name}}</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="panel-table">
+        <div *ngFor="let table of tableList" class="table" (click)="clickTable(table)">
+            <span *ngIf="table.billTemplId == ''; then empty else active"></span>
+            <ng-template #empty>
+                <div class="table-details">{{table.name}}</div>
+            </ng-template>
+            <ng-template #active>
+                <div class="table-details active">{{table.name}}</div>
+            </ng-template>
+        </div>
+    </div>
+</div>
+<div class="tablle-poup">
+    <div class="poup" id="popUp_empty">
+        <div class="bookTable">
+            <button (click)="bookTable()">Đặt Bàn</button>
+            <button (click)="cancelTablePopup()">Hủy</button>
+        </div>
+
+    </div>
+    <div class="poup" id="popUp_active">
+        <div>
+            <button>Chuyển Bàn</button>
+            <button>Gộp Bàn</button>
+        </div>
+
+    </div>
+</div>

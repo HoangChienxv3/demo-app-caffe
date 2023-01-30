@@ -1,0 +1,53 @@
+.category-food {
+    width: 100%;
+    height: 100%;
+    border: darkgrey solid 2px;
+}
+
+.category-option {
+    height: 8%;
+}
+
+.category-option-form select {
+    margin: 0.5%;
+    padding: 0.5%;
+    width: 30%;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #2F4F4F;
+}
+
+.category-option-form select option {
+    font-weight: bold;
+    color: #2F4F4F;
+}
+
+.panel-product {
+    width: 100%;
+    height: 92%;
+    /* min-height: 100%; */
+    overflow-y: scroll;
+    /* background-color: steelblue; */
+}
+
+.product {
+    float: left;
+    /* background-color: yellowgreen; */
+    width: 45%;
+    /* height: 150px; */
+    margin: 5px 2.5% 20px 2.5%;
+}
+
+.panel-product::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.panel-product::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.panel-product::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}

@@ -1,0 +1,12 @@
+<div class="grid-contrainer">
+    <div class="grid-item app-table">
+        <app-table (selectTable)="getTableData($event)" [tableIn]="loadTable"></app-table>
+    </div>
+    <div class="grid-item app-product">
+        <app-product (orderBill)="orderBill($event)"></app-product>
+    </div>
+    <div class="grid-item app-bill">
+        <!-- <app-bill [table]="tableData" [orderProductToBill]="orderToBill"></app-bill> -->
+        <app-bill [tableOrOrder]="tableOrOrderToBill" (loadTable)="sendToLoadTable($event)" (cancelBill)="cancelBillToTable($event)"></app-bill>
+    </div>
+</div>

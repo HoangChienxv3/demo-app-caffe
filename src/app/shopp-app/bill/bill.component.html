@@ -1,0 +1,67 @@
+<div class="bill-order">
+    <div class="bill-order-block">
+        <div>
+            <span>Table:</span>
+            <span *ngIf="table != undefined">{{table.name}}</span>
+            <br><br>
+        </div>
+        <div id="bill-print">
+            <table class="bill-table">
+                <tr>
+                    <th>Tên SP</th>
+                    <th style="width: 10%;">SL</th>
+                    <th>ĐG</th>
+                    <th>TT</th>
+                    <th>X</th>
+                </tr>
+                <tr *ngFor="let item of tableBill">
+                    <td>{{item.productName}}</td>
+                    <td>{{item.qty}}</td>
+                    <td>
+                        <span *ngIf="item.discount >0; then discount else noDiscount"></span>
+                        <ng-template #discount>
+                            <span style="text-decoration: line-through;">{{item.unitPrice}}</span>
+                            <br>
+                            <span>{{item.unitPrice*(100-item.discount)/100}}</span>
+                        </ng-template>
+                        <ng-template #noDiscount>
+                            <span>{{item.unitPrice}}</span>
+                        </ng-template>
+                    </td>
+                    <td>
+                        {{item.qty*item.unitPrice*(100-item.discount)/100}}
+                    </td>
+                    <td>
+                        <button class="delete" (click)="deleteProduct(item.productId)">x</button>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <br>
+                <span>
+                    Thành tiền 
+                </span>
+                <br>
+                <span>
+                    {{totalMoney}} VND
+                </span>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="button-control-payment">
+        <table>
+            <tr>
+                <td colspan="2"><button (click)="payment()" class="payment-button">Thanh Toán</button></td>
+            </tr>
+            <tr>
+                <td><button (click)="printer()" class="printer-button">In</button></td>
+                <td><button (click)="clickCancelBill()" class="cancel-button">Hủy</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script>
+</script>

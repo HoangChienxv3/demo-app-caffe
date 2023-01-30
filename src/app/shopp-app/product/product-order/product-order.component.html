@@ -1,0 +1,48 @@
+<table>
+    <tbody>
+        <tr>
+            <td rowspan="2" style="width: 20%;">
+                <div class="img-product">
+                    <img src="{{product.image}}">
+                </div>
+            </td>
+            <td>
+                <div>
+                    {{product.name}}
+                </div>
+            </td>
+            <td style="width: 30%;">
+                <tr class="button-contro-qty">
+                    <td><button (click)="minusProduct()">-</button></td>
+                    <td><input type="text" style="width: 20px;" [value]="qty" (change)="onChangeQty()" id="qty{{product.id}}"></td>
+                    <td><button (click)="addProduct()">+</button></td>
+                    <td><button (click)="resetQty()">
+                        <img src="https://flaticons.net/icon.php?slug_category=application&slug_icon=command-reset" style="width:10px ;height: auto ;">
+                    </button></td>
+                </tr>
+            </td>
+        </tr>
+        <tr>
+            <td><span *ngIf="product.discount > 0; then discount else noDiscount"></span>
+                <ng-template #discount>
+                    <div>
+                        <span style="text-decoration: line-through">
+                            {{product.price}}
+                        </span> &nbsp;&nbsp;
+                        <span>
+                        {{product.price * (100-product.discount)/100}}
+                        </span>
+                    </div>
+                </ng-template>
+                <ng-template #noDiscount>
+                    <div>
+                        {{product.price}}
+                    </div>
+                </ng-template>
+            </td>
+            <td>
+                <button (click)="order()" class="button-order">Order</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

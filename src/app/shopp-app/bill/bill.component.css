@@ -1,0 +1,101 @@
+.bill-order {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: darkgrey solid 2px;
+}
+
+.bill-order-block {
+    margin: 5px;
+}
+
+span {
+    font-weight: bold;
+}
+
+table,
+th,
+td {
+    border: 1px solid darkgray;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.bill-table {
+    width: 100%;
+    font-size: 10px;
+}
+
+.delete {
+    background-color: brown;
+    color: white;
+    border: none;
+}
+
+.delete:hover {
+    background-color: red;
+}
+
+.button-control-payment {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.button-control-payment table {
+    border: none;
+    width: 100%;
+}
+
+.button-control-payment table tr td {
+    border: none;
+    padding: 5px;
+}
+
+.button-control-payment table tr .payment-button {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #022E83;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3); */
+}
+
+.button-control-payment table tr .printer-button {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3); */
+}
+
+.button-control-payment table tr .cancel-button {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #E85152;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3); */
+}
+
+.button-control-payment table tr button:hover {
+    background-color: #DEB887;
+    color: black;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media all {
+    .page-break {
+        display: none;
+    }
+}
